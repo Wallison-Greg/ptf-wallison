@@ -7,13 +7,13 @@
 
 }
 body{
-    background-color: #191A1B;
+    background-color: #18191a;
 }
 header{
     display: flex;
     justify-content: center;
     height: 100px;
-    background-color: rgba(0, 0, 0, 0.61);
+    background-color: #111213;
 }
 .container{
     display: flex;
@@ -61,7 +61,7 @@ nav a{
     display: flex;
     align-items: center;
     color: white;
-    border-bottom: 3px solid  rgba(0, 0, 0, 0.849) ;
+    border-bottom: 3px solid  #111213 ;
 }
 nav a:hover{
     border-bottom: 3px solid #F2B705;
@@ -72,6 +72,12 @@ nav a:hover{
     height: calc(100vh - 100px); 
     width: 100%;
     display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#banner .body{
+    display: flex;
+    flex: 1;
     justify-content: center;
     align-items: center;
 }
