@@ -1,10 +1,12 @@
+@import url('/assets/style/anima.css');
 *{
     padding: 0;
     margin: 0;
     box-sizing: border-box;
 }
 :root{
-
+    --mont : 'Montserrat', sans-serif;
+    --cor1: #F2B705;
 }
 body{
     background-color: #18191a;
@@ -64,8 +66,8 @@ nav a{
     border-bottom: 3px solid  #111213 ;
 }
 nav a:hover{
-    border-bottom: 3px solid #F2B705;
-    color: #F2B705;
+    border-bottom: 3px solid var(--cor1);
+    color: var(--cor1);
     transition-duration: .5s;
 }
 #banner{
@@ -74,10 +76,61 @@ nav a:hover{
     display: flex;
     justify-content: center;
     align-items: center;
+    background-image: linear-gradient(50deg, #000, #18191a, #F2B705);
 }
 #banner .body{
     display: flex;
     flex: 1;
     justify-content: center;
     align-items: center;
+}
+#desc{
+    margin-right: 70px;
+}
+#desc p{
+    font-size: 26px;
+    color: white;
+    font-weight: 600;
+    font-family: var(--mont);
+    text-transform: uppercase;
+    text-shadow: 2px 2px 3px black;
+}
+#desc #name{
+    color: var(--cor1);
+}
+#name{
+    height: 30px;
+}
+#desc a{
+    text-decoration: none;
+    margin-top: 10px;
+}
+#desc #lkd{
+    padding: 5px;
+    border: 2px solid var(--cor1);
+    width: 85px;
+    border-radius: 50px;
+    margin-top: 15px;
+    font-size: 14px;
+}
+#perfil{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+#perfil #sombra{
+    margin-top: 5px;
+    width: 90px;
+    height: 50px;
+    background-color: #18191a;
+    border-radius: 55%;
+}
+#perfil #foto{
+    animation-name: perfil;
+    animation-iteration-count: infinite;
+    animation-duration: 2s;
+}
+#banner a:hover{
+    color: var(--cor1);
 }

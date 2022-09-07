@@ -1,0 +1,33 @@
+@keyframes perfil{
+    10%{
+        margin-bottom: 4px;
+    }
+    20%{
+        margin-bottom: 8px;
+    }
+    30%{
+        margin-bottom: 12px;
+    }
+    40%{
+        margin-bottom: 16px;
+    }
+    50%{
+        margin-bottom: 20px;
+    }
+    60%{
+        margin-bottom: 20px;
+    }
+    70%{
+        margin-bottom: 16px;
+    }
+    80%{
+        margin-bottom: 12px;
+    }
+    90%{
+        margin-bottom: 8px;
+    }
+    100%{
+        margin-bottom: 4px;
+    }
+
+}
