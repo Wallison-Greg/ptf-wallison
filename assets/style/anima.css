@@ -1,33 +1,26 @@
 @keyframes perfil{
-    10%{
+    10%, 100%{
         margin-bottom: 4px;
     }
-    20%{
+    20%, 90%{
         margin-bottom: 8px;
     }
-    30%{
+    30%, 80%{
         margin-bottom: 12px;
     }
-    40%{
+    40%, 70%{
         margin-bottom: 16px;
+    }
+    50%, 60%{
+        margin-bottom: 20px;
+    }
+}
+
+@keyframes rocket{
+    0%, 100%{
+        transform: translateY(-2px);
     }
     50%{
-        margin-bottom: 20px;
+        transform: translateY(2px);
     }
-    60%{
-        margin-bottom: 20px;
-    }
-    70%{
-        margin-bottom: 16px;
-    }
-    80%{
-        margin-bottom: 12px;
-    }
-    90%{
-        margin-bottom: 8px;
-    }
-    100%{
-        margin-bottom: 4px;
-    }
-
 }

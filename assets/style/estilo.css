@@ -11,11 +11,15 @@
 body{
     background-color: #18191a;
 }
+
+/*cabeçalho*/
+
 header{
     display: flex;
     justify-content: center;
     height: 100px;
     background-color: #111213;
+    box-shadow: 0px 0px 6px black;
 }
 .container{
     display: flex;
@@ -70,6 +74,9 @@ nav a:hover{
     color: var(--cor1);
     transition-duration: .5s;
 }
+
+/*banner principal*/
+
 #banner{
     height: calc(100vh - 100px); 
     width: 100%;
@@ -133,4 +140,118 @@ nav a:hover{
 }
 #banner a:hover{
     color: var(--cor1);
+}
+
+/*sobre*/
+#sobre,
+#projetos,
+#habilidades{
+    display: flex;
+    justify-content: center;
+    padding-bottom: 30px;
+}
+#sobre .container{
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.widget-title{
+    margin: 30px 0px 30px 0px;
+}
+.widget-title-text{
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 18px;
+    margin-bottom: 8px;
+    color: #BDB7AF;
+}
+.widget-title-bar{
+    width: auto;
+    height: 2px;
+    background-color: var(--cor1);
+}
+#sobre .body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex: 1;
+    margin-bottom: 100px;
+}
+.body #area,
+.body #apresentacao{
+    width: 50%;
+}
+#area{
+    display: flex;
+    justify-content: center;
+    position: relative;
+}
+#area #rocket{
+    position: relative;
+    animation: rocket 0.2s ease infinite;
+}
+#rocket img{
+    width: 105px;
+    height: 150px;
+}
+#area #rocket::before{
+    content:'';
+    position: absolute;
+    bottom: -100px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 10px;
+    height: 100px;
+    background: linear-gradient(#F2B705,transparent);
+}
+#area #rocket::after{
+    content:'';
+    position: absolute;
+    bottom: -100px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 10px;
+    height: 100px;
+    background: linear-gradient(#F2B705,transparent);
+    filter: blur(20px);
+}
+#apresentacao{
+    font-family: var(--mont);
+    font-weight: 400;
+    color: white;
+}
+
+/*projetos*/
+
+.body .projects{
+    display: flex;
+    justify-content: center;
+}
+.projects .proj{
+    width: 230px;
+    height: 200px;
+    border-radius: 15px;
+    margin: 10px;
+    background-color: aqua;
+    box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.9);
+}
+#projetos .container{
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.proj .info{
+    display: none;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    width: inherit;
+    height: inherit;
+    font-weight: 600;
+    color: white;
+    text-align: center;
+    text-shadow: 0px 2px 4px black;
+}
+.proj .info:hover{
+    display: flex;
 }
