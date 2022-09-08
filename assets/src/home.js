@@ -1,3 +1,24 @@
+/*animatio menu */
+
+const menu = document.querySelectorAll('.menu a');
+
+menu.forEach((item) => {
+    item.addEventListener('click', scrollClick);
+});
+
+function scrollClick(event){
+    event.preventDefault();
+
+    const elemento = event.target;
+    const id = elemento.getAttribute('href');
+    const section = document.querySelector(id).offsetTop;
+
+    window.scroll({
+        top: section,
+        behavior: 'smooth'
+    });
+}
+
 /*animação de digitação*/
 
 const digitacao = (text, cont) => {
@@ -16,8 +37,39 @@ const digitacao = (text, cont) => {
 
 digitacao('wallison gregorio', 0);
 
-/*animação banner imagem */
+/*menu / botão */
 
-let img = document.getElementById('foto');
+window.onload = () => {
+    document.querySelector(".btn").addEventListener("click", () =>{
+        if(document.querySelector(".ocut").style.display === 'flex'){
+            document.querySelector(".ocut").style.display = 'none'
+        }
+        else{
+            document.querySelector(".ocut").style.display = 'flex'
+        }
+    })
+}
 
-let cordenadas = img.getBoundingClientRect(); //verificando a posição do elemento
+/*animação galaxy */
+
+function stars (){
+    let count = 50;
+    let area = document.querySelector('#area');
+    let i = 0;
+
+    while(i < count){
+        let star = document.createElement('i');
+        let x = Math.floor(Math.random() * window.innerWidth);
+        let duration = Math.random() * 1;
+        let h = Math.random() * 100;
+
+        star.style.left = x + 'px';
+        star.style.width = 1 + 'px';
+        star.style.height = h + 'px';
+        star.style.animationDuration = duration + 's';
+
+        area.appendChild(star);
+        i++
+    }
+}
+stars();

@@ -9,7 +9,7 @@
     --cor1: #F2B705;
 }
 body{
-    background-color: #18191a;
+    background-color: #222324;
 }
 
 /*cabeçalho*/
@@ -75,8 +75,6 @@ nav a:hover{
     transition-duration: .5s;
 }
 
-/*banner principal*/
-
 #banner{
     height: calc(100vh - 100px); 
     width: 100%;
@@ -138,8 +136,8 @@ nav a:hover{
     animation-iteration-count: infinite;
     animation-duration: 2s;
 }
-#banner a:hover{
-    color: var(--cor1);
+#lkd:hover{
+    color: var(--cor1) !important;
 }
 
 /*sobre*/
@@ -156,7 +154,7 @@ nav a:hover{
     justify-content: center;
 }
 .widget-title{
-    margin: 30px 0px 30px 0px;
+    margin:50px 0px 30px 0px;
 }
 .widget-title-text{
     font-weight: bold;
@@ -170,21 +168,32 @@ nav a:hover{
     height: 2px;
     background-color: var(--cor1);
 }
+#sobre{
+    height: 88vh;
+}
 #sobre .body{
     display: flex;
     justify-content: center;
-    align-items: center;
     flex: 1;
-    margin-bottom: 100px;
+    margin-bottom: 50px;
+    margin-top: 50px;
 }
 .body #area,
 .body #apresentacao{
     width: 50%;
+    overflow: hidden;
 }
 #area{
     display: flex;
     justify-content: center;
     position: relative;
+    padding:50px 0px;
+}
+#area i{
+    position: absolute;
+    top: -100px;
+    background: rgba(255, 255, 255, 0.5);
+    animation: star linear infinite;
 }
 #area #rocket{
     position: relative;
@@ -197,21 +206,21 @@ nav a:hover{
 #area #rocket::before{
     content:'';
     position: absolute;
-    bottom: -100px;
+    bottom: -12px;
     left: 50%;
     transform: translateX(-50%);
     width: 10px;
-    height: 100px;
+    height: 102px;
     background: linear-gradient(#F2B705,transparent);
 }
 #area #rocket::after{
     content:'';
     position: absolute;
-    bottom: -100px;
+    bottom: -15px;
     left: 50%;
     transform: translateX(-50%);
     width: 10px;
-    height: 100px;
+    height: 110px;
     background: linear-gradient(#F2B705,transparent);
     filter: blur(20px);
 }
@@ -222,36 +231,105 @@ nav a:hover{
 }
 
 /*projetos*/
-
+#pojetos .body{
+    margin-top: 30px;
+}
+#projetos .widget-title{
+    margin-top: 40px;
+}
 .body .projects{
     display: flex;
     justify-content: center;
+    margin-bottom: 30px;
 }
 .projects .proj{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.proj .info{
+    display: none;
+    text-align: center;
+    flex-direction: column;
+}
+.projects .proj:hover > .info{
+    display: flex;
+}
+.info h2{
+    text-transform: uppercase;
+    color: #b1aca5;
+    text-shadow: 0px 2px 4px black;
+    font-size: 20px;
+}
+.info p{
+    color: #e6e6e6;
+    font-family: var(--mont);
+    font-weight: 400;
+    font-size: 11px;
+    margin: 10px 0px;
+}
+.proj .acesso{
+    display: flex;
+}
+.acesso .lk{
+    border: 1.5px solid #F2B705;
+    border-radius: 15px;
+    margin: 5px 5px 10px 5px;
+    box-shadow: 2px 2px 5px black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.acesso a{
+    padding: 5px;
+    text-decoration: none;
+    color: white;
+    font-weight: 400;
+    text-shadow: 0px 2px 4px black;
+}
+.acesso a:hover{
+    color: var(--cor1);
+}
+.projects .area-proj{
+    margin: 10px; 
+}
+.info,
+.acesso{
+    max-width: 230px;
+}
+.area-proj > img{
     width: 230px;
     height: 200px;
     border-radius: 15px;
-    margin: 10px;
-    background-color: aqua;
+    overflow: hidden;
     box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.9);
+}
+#projetos{
+    background-color: #151718;
+    box-shadow: 0px 0px 6px black;
 }
 #projetos .container{
     flex-direction: column;
     justify-content: center;
     align-items: center;
 }
-.proj .info{
+.body .ocut{
     display: none;
+}
+#projetos .btn{
+    display: flex;
     justify-content: center;
     align-items: center;
-    position: absolute;
-    width: inherit;
-    height: inherit;
-    font-weight: 600;
+    font-size: 14px;
+    font-weight: 400;
     color: white;
-    text-align: center;
-    text-shadow: 0px 2px 4px black;
+    box-shadow: 2px 2px 4px black;
+    cursor: pointer;
+    margin: 20px 0px;
+    border: 1.5px solid #F2B705;
+    border-radius: 15px;
+    padding: 5px;
 }
-.proj .info:hover{
-    display: flex;
+.container .btn:hover > p{
+    color: var(--cor1);
 }
