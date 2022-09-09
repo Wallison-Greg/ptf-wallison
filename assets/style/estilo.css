@@ -227,6 +227,7 @@ nav a:hover{
 #apresentacao{
     font-family: var(--mont);
     font-weight: 400;
+    margin-left: 30px;
     color: white;
 }
 
@@ -256,7 +257,7 @@ nav a:hover{
     display: flex;
 }
 .info h2{
-    text-transform: uppercase;
+    text-transform: capitalize;
     color: #b1aca5;
     text-shadow: 0px 2px 4px black;
     font-size: 20px;
@@ -267,6 +268,9 @@ nav a:hover{
     font-weight: 400;
     font-size: 11px;
     margin: 10px 0px;
+}
+.info a{
+    color: #e6e6e6;
 }
 .proj .acesso{
     display: flex;
@@ -332,4 +336,38 @@ nav a:hover{
 }
 .container .btn:hover > p{
     color: var(--cor1);
+}
+
+/*rodapé*/
+
+footer{
+    display: flex;
+    justify-content: center;
+}
+footer .container{
+    flex-direction: column;
+}
+.container address{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px 0px;
+}
+address .contato{
+    width: 30px;
+    height: 30px;
+    border-radius: 15px;
+    border: 1px solid #000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 15px;
+}
+.contato img{
+    padding: 2px;
+    width: 22px;
+    height: 22px;
+}
+.contato:hover{
+    background-color: var(--cor1);
 }
