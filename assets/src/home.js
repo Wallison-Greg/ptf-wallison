@@ -40,6 +40,15 @@ digitacao('wallison gregorio', 0);
 /*menu / botão */
 
 window.onload = () => {
+    document.querySelector(".menu_open").addEventListener("click", () =>{
+        if(document.querySelector(".menu nav ul").style.display === 'flex'){
+            document.querySelector(".menu nav ul").style.display = 'none'
+        }
+        else{
+            document.querySelector(".menu nav ul").style.display = 'flex'
+        }
+    })
+
     document.querySelector(".btn").addEventListener("click", () =>{
         if(document.querySelector(".ocut").style.display === 'flex'){
             document.querySelector(".ocut").style.display = 'none'
@@ -61,11 +70,11 @@ function stars (){
         let star = document.createElement('i');
         let x = Math.floor(Math.random() * window.innerWidth);
         let duration = Math.random() * 1;
-        let h = Math.random() * 100;
+        //let h = Math.random() * 100;
 
         star.style.left = x + 'px';
         star.style.width = 1 + 'px';
-        star.style.height = h + 'px';
+        star.style.height = 28 + 'px';
         star.style.animationDuration = duration + 's';
 
         area.appendChild(star);

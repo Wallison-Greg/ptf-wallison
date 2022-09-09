@@ -228,7 +228,9 @@ nav a:hover{
     font-family: var(--mont);
     font-weight: 400;
     margin-left: 30px;
-    color: white;
+    line-height: 20px;
+    text-align: justify;
+    color: #e6e6e6;
 }
 
 /*projetos*/
@@ -242,6 +244,9 @@ nav a:hover{
     display: flex;
     justify-content: center;
     margin-bottom: 30px;
+}
+.projects .gp-proj{
+    display: flex;
 }
 .projects .proj{
     display: flex;
@@ -370,4 +375,116 @@ address .contato{
 }
 .contato:hover{
     background-color: var(--cor1);
+}
+
+/*responsividade*/
+
+@media (max-width: 1000px){
+    .projects{
+        flex-direction: column;
+    }
+}
+@media (max-width: 730px){
+
+    /*banner*/
+
+    #banner .body{
+        flex-direction: column-reverse;
+    }
+    .body #desc{
+        margin: 30px 0px 20px 0px ;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    #perfil #foto{
+        width: 200px;
+        height: 250px;
+    }
+    #perfil #sombra{
+        background-color: #232527cc;
+        width: 75px;
+        height: 40px;
+    }
+
+    /*sobre*/
+
+    #sobre .body{
+        flex-direction: column;
+        align-items: center;
+        margin-top: 0;
+    }
+    #area{
+        margin-bottom: 30px;
+        height: 300px;
+    }
+    #rocket img{
+        width: 80px;
+        height: 120px;
+    }
+    #area #rocket::before,
+    #area #rocket::after{
+        bottom: -22px;
+    }
+    #area #rocket::before{
+        width: 8px;
+    }
+    #apresentacao{
+        text-align: justify;
+    }
+}
+@media (max-width: 520px){
+    /*menu*/
+    .menu .menu_open {
+        display: flex;
+        width: 30px;
+        height: 30px;
+        cursor: pointer;
+        margin-left: 30vw;
+    }
+    nav ul:first-child{
+        margin-top: 50px;
+    }
+    nav ul{
+        display: none;
+        flex-direction: column;
+        width: 50vw;
+        position: absolute;
+        z-index: 99;
+        right: 0px;
+        background-color: rgba(0, 0, 0, 0.87);
+        height: calc(100vh - 100px);
+        margin-right: 0px;
+    }
+    nav a{
+        border-bottom: none;
+        height: auto;
+        font-weight: bold;
+        font-size: 16px;
+        margin: 4.8px 0px 4.8px 40px;
+    }
+    nav a:hover{
+        border-bottom: none;
+        color: var(--cor1);
+    }
+    /*banner*/
+
+    #desc p{
+        font-size: 20px;
+    }
+    #banner{ margin-bottom: 50px;}
+    /*sobre*/
+    #sobre{
+        margin-bottom: 50px;
+    }
+    #sobre .widget-title-text{
+        padding-top: 30px;
+    }
+    /*projetos*/
+    
+    .projects .gp-proj{
+        flex-wrap: wrap ;
+        justify-content: center;
+    }
 }
